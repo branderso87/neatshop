@@ -9,6 +9,7 @@ import Home from './components/Home'
 import MainProductsPage from './components/MainProductsPage'
 import About from './components/About'
 import SingleProductPage from './components/SingleProductPage'
+import Categories from './components/Categories'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/about" component={About} />
         <Route path="/products" component={MainProductsPage} />
         <Route path="/products/:id" component={SingleProductPage} />
+        <Route path='/categories/{category}' component={Categories} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>

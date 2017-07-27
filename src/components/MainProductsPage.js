@@ -6,8 +6,8 @@ class MainProductsPage extends Component {
 
   render () {
     return (
-      <div className='catWrapper'>
-        <aside className='catSide'>
+      <div className=''>
+        <aside className='catWrapper'>
           <div>Categories</div>
           <ul className='catLinks'>
             <li><Link to=''>Apparel</Link></li>
@@ -20,11 +20,13 @@ class MainProductsPage extends Component {
             <li><Link to=''>Video Games</Link></li>
           </ul>
         </aside>
-        <div>
-          <img src='https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457' alt='' />
-        </div>
-        <div>
-          <ProductsList />
+        <div className='productWrapper'>
+          <div>
+            <img src='https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457' alt='' />
+          </div>
+          <div>
+            <ProductsList />
+          </div>
         </div>
       </div>
     )

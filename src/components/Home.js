@@ -13,6 +13,7 @@ class Home extends Component {
         </div>
         <div>
           <HomeProductList />
+          <button>See More Products</button>
         </div>
       </div>
     )
