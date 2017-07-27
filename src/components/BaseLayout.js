@@ -3,15 +3,15 @@ import '../styles/index.css'
 import {NavLink} from 'react-router-dom'
 
 class BaseLayout extends Component {
-  render() {
+  render () {
     return (
       <div>
         <header className='mainHead'>
-          <nav>
-            <ul>
-              <li><NavLink className="mainNav" to="/">Neatshop</NavLink></li>
-              <li><NavLink className="mainNav" to="/products">Products</NavLink></li>
-              <li><NavLink className="mainNav"to="/about">About</NavLink></li>
+          <nav className='navWrapper'>
+            <ul className='mainNav'>
+              <li><NavLink className='mainNavLink' to='/'>Neatshop</NavLink></li>
+              <li><NavLink className='mainNavLink' to='/products'>Products</NavLink></li>
+              <li><NavLink className='mainNavLink'to='/about'>About</NavLink></li>
             </ul>
           </nav>
         </header>
@@ -19,7 +19,8 @@ class BaseLayout extends Component {
           {this.props.children}
         </main>
         <footer>
-
+          <div className='footLeft'>Information about stuff.</div>
+          <div className='footRight'>Signup</div>
         </footer>
       </div>
     )

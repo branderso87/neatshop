@@ -10,17 +10,43 @@ body {
 .mainHead {
   color: #ffffff;
   background: #3A5683;
-  height: 15vh;
+  height: 6vh;
 }
 ul{
   list-style: none;
 }
+.navWrapper {
+  display: flex;
+  justify-content:center;
+}
 .mainNav {
+  display:flex;
+  flex-flow: row nowrap;
+  width: 40%;
+}
+.mainNav li{
+  flex-basis:
+}
+.mainNavLink {
   text-decoration: none;
 }
-.mainNav:visited {
+.mainNavLink:visited {
   color: #ffffff;
 }
-.mainNav:hover, .mainNav:active{
+.mainNavLink:hover, .mainNav:active{
   color: #D5A021;
+}
+footer {
+  background: #A5A5A5;
+  height: 10vh;
+  color: #ffffff;
+  display:flex;
+  flex-flow: row nowrap;
+}
+.footLeft {
+  background:#3A5683;
+  flex-basis: 20%;
+}
+.footRight{
+  flex-basis: 80%;
 }
