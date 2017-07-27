@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next", sans-serif;
+}
+.mainHead {
+  color: #ffffff;
+  background: #3A5683;
+  height: 15vh;
+}
+ul{
+  list-style: none;
+}
+.mainNav {
+  text-decoration: none;
+}
+.mainNav:visited {
+  color: #ffffff;
+}
+.mainNav:hover, .mainNav:active{
+  color: #D5A021;
+}
