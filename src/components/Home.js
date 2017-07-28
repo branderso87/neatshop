@@ -2,7 +2,20 @@ import React, { Component } from 'react'
 import HomeProductList from './HomeProductList'
 
 class Home extends Component {
-
+  constructor () {
+    super()
+    this.state = {
+      products: []
+    }
+  }
+  componentDidMount () {
+    fetch ('')
+    .then(res => res.json())
+    .then(data => this.setState({
+      products: data
+      }
+    ))
+  }
   render () {
     return (
       <div>
