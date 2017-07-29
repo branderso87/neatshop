@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import HomeProductList from './HomeProductList'
+import authKey from '../keys.js'
 
 class Home extends Component {
   constructor () {
     super()
     this.state = {
-      products: []
+      products: {}
     }
   }
   componentDidMount () {
@@ -17,6 +18,7 @@ class Home extends Component {
     ))
   }
   render () {
+    console.log(authKey.productionKey)
     return (
       <div>
         <div className='homeHeader'>
@@ -25,7 +27,7 @@ class Home extends Component {
           <button className='bttn shopNow-bttn'>Shop Now</button>
         </div>
         <div>
-          <HomeProductList />
+          <HomeProductList homeProducts={this.state.products}/>
           <button>See More Products</button>
         </div>
       </div>
