@@ -6,20 +6,29 @@ class HomeProductList extends Component {
 // name = items.title[0]
 // affLink = items.viewItemURL
   render () {
-    console.log('products', products)
+    console.log('products', this.props.homeProducts)
+    // let items = products.map(())
     let products = this.props.homeProducts
-    return (
-      <div>
-        <div className='prodWrapper'>
-          <a href = ''>
-            <div className='prodCard'>
-              <img src='' alt=''/>
-              <div className='prodName'></div>
+    // let productList = products.map(() => {
+    // })
+    let productCard = products.map((item) => {
+      return (
+        <div  className='prodCard'>
+          <a href = {item.viewItemURL[0]}>
+            <div clasName='prodInfo-mini'>
+              <img src={item.galleryURL} alt={item.title[0]} />
+              <div className='prodName'>{item.title[0]}</div>
             </div>
           </a>
         </div>
+      )
+    })
+    return (
+      <div>
+        <div className='prodWrapper'>
+          {productCard}
+        </div>
       </div>
-
     )
   }
 
