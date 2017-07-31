@@ -1,6 +1,7 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0 auto;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -11,21 +12,20 @@ body {
   color: #ffffff;
   background: #3A5683;
   height: 6vh;
+  display: flex;
+  align-items: center;
+  font-family: "Avenir Next"
 }
 ul{
   list-style: none;
 }
 .navWrapper {
-  display: flex;
-  justify-content:center;
 }
 .mainNav {
-  display:flex;
-  flex-flow: row nowrap;
-  width: 40%;
+  display: flex;
 }
 .mainNav li{
-  flex-basis:
+  margin: 0;
 }
 .mainNavLink {
   text-decoration: none;
@@ -35,6 +35,9 @@ ul{
 }
 .mainNavLink:hover, .mainNav:active{
   color: #D5A021;
+}
+.fullwidth-img {
+  height: 33.4vh;
 }
 footer {
   background: #A5A5A5;
