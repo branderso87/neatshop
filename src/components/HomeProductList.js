@@ -13,9 +13,9 @@ class HomeProductList extends Component {
     // })
     let productCard = products.map((item) => {
       return (
-        <div  className='prodCard'>
-          <a href = {item.viewItemURL[0]}>
-            <div clasName='prodInfo-mini'>
+        <div className='prodCard' key={item.itemId[0]}>
+          <a href={item.viewItemURL[0]}>
+            <div className='prodInfo-mini'>
               <img src={item.galleryURL} alt={item.title[0]} />
               <div className='prodName'>{item.title[0]}</div>
             </div>
