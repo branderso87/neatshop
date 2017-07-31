@@ -11,10 +11,6 @@ class Home extends Component {
   componentDidMount () {
     fetch('/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=BrandiAn-NeatShop-PRD-7c6cc25dc-cc3d11e7&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=StoreInfo&paginationInput.entriesPerPage=6&sortOrder=EndTimeSoonest')
     .then(res => res.json())
-    .then( json => {
-      console.log(json)
-      return json
-    })
     .then(data => this.setState({
       products: data
       }
