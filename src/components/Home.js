@@ -29,8 +29,8 @@ class Home extends Component {
           <img className='fullwidth-img' src='https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038' alt='' />
           <button className='bttn shopNow-bttn'>Shop Now</button>
         </div>
+        <HomeProductList homeProducts={this.state.products} />
         <div>
-          <HomeProductList homeProducts={this.state.products} />
           <button>See More Products</button>
         </div>
       </div>
