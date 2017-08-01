@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import ProductsList from './ProductsList'
+import authKey from '../keys'
 
 class MainProductsPage extends Component {
   constructor () {
@@ -10,7 +11,7 @@ class MainProductsPage extends Component {
     }
   }
   componentDidMount () {
-    fetch('/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=BrandiAn-NeatShop-PRD-7c6cc25dc-cc3d11e7&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=StoreInfo&sortOrder=EndTimeSoonest')
+    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=StoreInfo&sortOrder=EndTimeSoonest`)
     .then(res2 => res2.json())
     .then(data2 => {
       const allItems = data2.findItemsIneBayStoresResponse[0].searchResult[0].item
