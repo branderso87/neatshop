@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import HomeProductList from './HomeProductList'
 import authKey from '../keys'
+import {Link} from 'react-router-dom'
+
 console.log('authkey', authKey.productionKey)
 class Home extends Component {
   constructor () {
@@ -11,7 +13,7 @@ class Home extends Component {
   }
 
   componentDidMount () {
-    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=StoreInfo&paginationInput.entriesPerPage=6&sortOrder=EndTimeSoonest`)
+    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=PictureURLLarge&paginationInput.entriesPerPage=6&sortOrder=EndTimeSoonest`)
     .then(res => res.json())
     .then(data => {
       const items = data.findItemsIneBayStoresResponse[0].searchResult[0].item
@@ -31,7 +33,7 @@ class Home extends Component {
               <div className='tlineHead'>Neat Things</div>
               <div className='tlineSub'>Added Daily</div>
             </div>
-            <button className='bttn shopNow-bttn'>Shop Now</button>
+              <button className='bttn shopNow-bttn'><Link to='/products'>Shop Now</Link></button>
           </div>
         </div>
           <HomeProductList homeProducts={this.state.products} />

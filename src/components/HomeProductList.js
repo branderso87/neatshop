@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 class HomeProductList extends Component {
   render () {
@@ -9,7 +10,7 @@ class HomeProductList extends Component {
         <div className='prodCard' key={item.itemId[0]}>
           <a href={item.viewItemURL[0]}>
             <div className='prodInfo'>
-              <img className='prodImg' src={item.galleryURL} alt={item.title[0]} />
+              <img className='prodImg' src={item.pictureURLLarge} alt={item.title[0]} />
               <div className='prodName'>{item.title[0]}</div>
             </div>
           </a>
@@ -20,7 +21,7 @@ class HomeProductList extends Component {
       <div>
         <div className='prodWrapper'>
           {productCard}
-          <button className='bttn shopNow-bttn'>See More Products</button>
+          <button className='bttn shopNow-bttn'><Link to='/products'>See More Products</Link></button>
         </div>
       </div>
     )

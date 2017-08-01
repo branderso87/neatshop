@@ -10,7 +10,7 @@ class ProductsList extends Component {
         <div className='prodCard' key={item.itemId[0]}>
         <a href={item.viewItemURL[0]}>
           <div className='prodInfo'>
-            <img src={item.galleryURL} alt={item.title[0]} />
+            <img className='prodImg' src={item.pictureURLLarge} alt={item.title[0]} />
             <div className='prodName'>{item.title[0]}</div>
           </div>
         </a>
@@ -20,7 +20,7 @@ class ProductsList extends Component {
     console.log(allProductsCard)
     return (
       <div>
-        <div className='allProdWrapper'>
+        <div className='prodWrapper allProdWrapper'>
           {allProductsCard}
         </div>
       </div>

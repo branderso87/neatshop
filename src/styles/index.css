@@ -82,9 +82,11 @@ footer {
 }
 .shopNow-bttn {
   background: #D5A021;
-  color: #FCFFF7;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+.shopNow-bttn, .shopNow-bttn a{
+  color:#FCFFF7;
 }
 .bttn{
   border-radius: 4px;
@@ -98,12 +100,12 @@ footer {
   display: flex;
   flex-flow: column wrap;
 }
-.prodCard a{
+a{
   text-decoration: none;
   color: #5B5B5B;
 }
 .prodCard{
-  width: 80%;
+  width: 70%;
   margin-top: 7%;
 }
 .prodInfo{
@@ -113,8 +115,28 @@ footer {
   margin: 5% 0;
 }
 .prodImg {
-  width: 80%;
+  width:100%;
   margin-bottom: 3%;
+}
+
+/* Product Page Layout*/
+
+.productsPageWrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+.catLinks{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.catLinks li{
+  flex-basis: 25%;
+}
+.prodHeaderImg {
+  background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457');
+  background-size: cover;
+  display: flex;
 }
 
 @media (min-width: 500px) {
@@ -153,6 +175,9 @@ footer {
   .prodCard{
     flex-basis: 45%;
     margin-top: 7%;
+  }
+  .prodName {
+    font-size: 2.5vh;
   }
 }
 @media (min-width: 700px) {

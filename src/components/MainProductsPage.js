@@ -11,7 +11,7 @@ class MainProductsPage extends Component {
     }
   }
   componentDidMount () {
-    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=StoreInfo&sortOrder=EndTimeSoonest`)
+    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=home_products&storeName=neatthingstx&outputSelector=PictureURLLarge&sortOrder=EndTimeSoonest`)
     .then(res2 => res2.json())
     .then(data2 => {
       const allItems = data2.findItemsIneBayStoresResponse[0].searchResult[0].item
@@ -22,7 +22,7 @@ class MainProductsPage extends Component {
   }
   render () {
     return (
-      <div className=''>
+      <div className='productsPageWrapper'>
         <aside className='catWrapper'>
           <div>Categories</div>
           <ul className='catLinks'>
@@ -36,9 +36,9 @@ class MainProductsPage extends Component {
             <li><Link to=''>Video Games</Link></li>
           </ul>
         </aside>
-        <div className='productWrapper'>
-          <div>
-            <img src='https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457' alt='' />
+        <div className='allProductsWrapper'>
+          <div className='fullwidth-img prodHeaderImg'>
+            <div>Cool things are sold here!</div>
           </div>
             <ProductsList allProducts={this.state.allProducts} />
         </div>
