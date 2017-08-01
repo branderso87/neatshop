@@ -26,14 +26,15 @@ class Home extends Component {
     return (
       <div>
         <div className='homeHeader'>
-          <div>All The Neat Products You Could Ever Want</div>
-          <img className='fullwidth-img' src='https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038' alt='' />
-          <button className='bttn shopNow-bttn'>Shop Now</button>
+          <div className='fullwidth-img'>
+            <div className='tagLine'>
+              <div className='tlineHead'>Neat Things</div>
+              <div className='tlineSub'>Added Daily</div>
+            </div>
+            <button className='bttn shopNow-bttn'>Shop Now</button>
+          </div>
         </div>
-        <HomeProductList homeProducts={this.state.products} />
-        <div>
-          <button>See More Products</button>
-        </div>
+          <HomeProductList homeProducts={this.state.products} />
       </div>
     )
   }

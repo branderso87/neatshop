@@ -8,8 +8,8 @@ class HomeProductList extends Component {
       return (
         <div className='prodCard' key={item.itemId[0]}>
           <a href={item.viewItemURL[0]}>
-            <div className='prodInfo-mini'>
-              <img src={item.galleryURL} alt={item.title[0]} />
+            <div className='prodInfo'>
+              <img className='prodImg' src={item.galleryURL} alt={item.title[0]} />
               <div className='prodName'>{item.title[0]}</div>
             </div>
           </a>
@@ -20,6 +20,7 @@ class HomeProductList extends Component {
       <div>
         <div className='prodWrapper'>
           {productCard}
+          <button className='bttn shopNow-bttn'>See More Products</button>
         </div>
       </div>
     )

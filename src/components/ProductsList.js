@@ -9,7 +9,7 @@ class ProductsList extends Component {
       return (
         <div className='prodCard' key={item.itemId[0]}>
         <a href={item.viewItemURL[0]}>
-          <div className='prodInfo-mini'>
+          <div className='prodInfo'>
             <img src={item.galleryURL} alt={item.title[0]} />
             <div className='prodName'>{item.title[0]}</div>
           </div>
