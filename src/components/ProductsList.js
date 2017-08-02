@@ -17,7 +17,6 @@ class ProductsList extends Component {
       </div>
       )
     })
-    console.log(allProductsCard)
     return (
       <div>
         <div className='prodWrapper allProdWrapper'>
