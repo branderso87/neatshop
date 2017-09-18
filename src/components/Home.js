@@ -3,7 +3,7 @@ import HomeProductList from './HomeProductList'
 import authKey from '../keys'
 import {Link} from 'react-router-dom'
 
-console.log('authkey', authKey.productionKey)
+// console.log('authkey', authKey.productionKey)
 class Home extends Component {
   constructor () {
     super()
