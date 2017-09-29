@@ -15,11 +15,11 @@ ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/products" component={MainProductsPage} />
-        <Route path="/products/:id" component={SingleProductPage} />
-        <Route path='/categories/{category}' component={Categories} />
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/products' component={MainProductsPage} />
+        <Route path='/products/:id' component={SingleProductPage} />
+        <Route path='/categories/:category' component={Categories} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
