@@ -17,8 +17,9 @@ body {
 }
 /***********************Semantic Layout***********************************/
 
-.topMenu {
+#topMenu {
   background: #fff;
+  font-size: 1.2rem;
 }
 .footSegment {
  background: red;
@@ -55,6 +56,7 @@ h2 {
 }
 .ui.card>.image {
   height: 200px;
+  margin: 1.5rem;
 }
 /*BaseLayout - Header and Footer */
 .mainHead {
@@ -148,10 +150,10 @@ a{
   text-decoration: none;
   color: #5B5B5B;
 }
-.prodCard{
+/*.prodCard{
   width: 70%;
   margin-top: 7%;
-}
+}*/
 .prodInfo{
   display: flex;
   flex-flow: column wrap;

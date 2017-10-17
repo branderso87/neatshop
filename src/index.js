@@ -10,6 +10,7 @@ import MainProductsPage from './components/MainProductsPage'
 import About from './components/About'
 import SingleProductPage from './components/SingleProductPage'
 import Categories from './components/Categories'
+import Contact from './components/Contact'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
         <Route path='/products' component={MainProductsPage} />
         <Route path='/products/:id' component={SingleProductPage} />
         <Route path='/categories/:category' component={Categories} />

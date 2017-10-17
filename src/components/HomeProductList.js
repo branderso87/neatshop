@@ -9,8 +9,8 @@ class HomeProductList extends Component {
     let productCard = products.map((item) => {
       if(item.pictureURLLarge === undefined) {
         return (
-          <div className='prodCard' key={item.itemId[0]}>
-            <Card as={Link} to={item.viewItemURL[0]}>
+          <div key={item.itemId[0]}>
+            <Card as='a' href={item.viewItemURL[0]}>
               <Image src={item.galleryURL} alt={item.title[0]} />
               <Card.Content>
                 <Card.Header>{item.title[0]}</Card.Header>
@@ -20,8 +20,8 @@ class HomeProductList extends Component {
         )
       } else {
         return (
-          <div className='prodCard' key={item.itemId[0]}>
-            <Card as={Link} to={item.viewItemURL[0]}>
+          <div key={item.itemId[0]}>
+            <Card as='a' href={item.viewItemURL[0]}>
               <Image src={item.pictureURLLarge} alt={item.title[0]} />
               <Card.Content>
                 <Card.Header>{item.title[0]}</Card.Header>

@@ -9,11 +9,11 @@ class BaseLayout extends Component {
     return (
       <div>
           <div>
-            <Menu fixed='top' pointing secondary style={{background: '#fff'}}>
+            <Menu fixed='top' pointing secondary id='topMenu'>
               <Container>
-                <Menu.Item as={NavLink} name='Neatshop' to='/' />
+                <Menu.Item as={NavLink} name='Neatshopp' to='/' />
                 <Menu.Item as={NavLink} name='Products' to='/products' />
-                <Menu.Item as={NavLink} name='About' to='/about' />
+                <Menu.Item as={NavLink} name='Contact' to='/contact' />
               </Container>
             </Menu>
           </div>

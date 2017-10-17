@@ -9,24 +9,24 @@ class ProductsList extends Component {
     let allProductsCard = allProducts.map((item) => {
       if(item.pictureURLLarge === undefined) {
         return (
-          <div className='prodCard' key={item.itemId[0]}>
-            <a href={item.viewItemURL[0]}>
-              <div className='prodInfo'>
-                <img className='prodImg' src={item.galleryURL} alt={item.title[0]} />
-                <div className='prodName'>{item.title[0]}</div>
-              </div>
-            </a>
+          <div key={item.itemId[0]}>
+            <Card as='a' href={item.viewItemURL[0]}>
+              <Image src={item.galleryURL} alt={item.title[0]} />
+              <Card.Content>
+                <Card.Header>{item.title[0]}</Card.Header>
+              </Card.Content>
+            </Card>
           </div>
         )
       } else {
         return (
-          <div className='prodCard' key={item.itemId[0]}>
-            <a href={item.viewItemURL[0]}>
-              <div className='prodInfo'>
-                <img className='prodImg' src={item.pictureURLLarge} alt={item.title[0]} />
-                <div className='prodName'>{item.title[0]}</div>
-              </div>
-            </a>
+          <div key={item.itemId[0]}>
+            <Card as='a' href={item.viewItemURL[0]}>
+              <Image src={item.pictureURLLarge} alt={item.title[0]} />
+              <Card.Content>
+                <Card.Header>{item.title[0]}</Card.Header>
+              </Card.Content>
+            </Card>
           </div>
         )
       }
