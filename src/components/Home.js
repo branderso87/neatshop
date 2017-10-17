@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HomeProductList from './HomeProductList'
 import authKey from '../keys'
 import {Link} from 'react-router-dom'
+import {Container, Segment, Grid, Header, Button, Image} from 'semantic-ui-react'
 
 // console.log('authkey', authKey.productionKey)
 class Home extends Component {
@@ -26,16 +27,33 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <div className='homeHeader'>
-          <div className='fullwidth-img'>
-            <div className='tagLine'>
-              <div className='tlineHead'>Neat Things</div>
-              <div className='tlineSub'>Added Daily</div>
-            </div>
-              <button className='bttn shopNow-bttn'><Link to='/products'>Shop Now</Link></button>
-          </div>
-        </div>
-          <HomeProductList homeProducts={this.state.products} />
+        <Segment>
+          <Container fluid textAlign='center' className='homeHeader'>
+            <Header as='h2' className='imgHeader'>Neat Things Added Daily</Header>
+            <Button large as={Link} to='/products'>SHOP NOW</Button>
+          </Container>
+        </Segment>
+        <Container className='bannerAd' id='fullwidth-banner'>
+          <Header as='h4' id='whiteHeader'>Fall Sale. Take 20% off Specially Marked Items</Header>
+        </Container>
+        <Segment>
+          <Container>
+            <Header dividing>
+              PRODUCTS LEAVING SOON
+            </Header>
+            <HomeProductList homeProducts={this.state.products} />
+            <Button fluid as={Link} to='/products'>SEE MORE</Button>
+          </Container>
+        </Segment>
+        <Segment style={{display:'none'}}>
+          <Container>
+            <Header dividing>
+              THIS JUST IN
+            </Header>
+            <HomeProductList homeProducts={this.state.products} />
+            <Button fluid as={Link} to='/products'>SEE MORE</Button>
+          </Container>
+        </Segment>
       </div>
     )
   }

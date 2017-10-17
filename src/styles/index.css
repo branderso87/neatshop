@@ -25,6 +25,37 @@ body {
  margin: 5em 0em 0em;
  padding: 5em 0em;
 }
+.homeHeader {
+  background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038');
+  background-size: cover;
+  margin: 2.5em 0 auto 0;
+}
+h2 {
+  font-size: 5rem;
+}
+.bannerAd {
+  background: #3A5683;
+  margin: 0;
+  padding: 1.3rem;
+
+}
+#whiteHeader {
+  color: #fff;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+#fullwidth-banner {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+.ui.segment {
+  border: none;
+  margin: 0;
+}
+.ui.card>.image {
+  height: 200px;
+}
 /*BaseLayout - Header and Footer */
 .mainHead {
   color: #ffffff;
@@ -70,10 +101,6 @@ ul{
 
 /*Home Page Layout*/
 
-.homeHeader {
-  background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038');
-  background-size: cover;
-}
 .homeHeader, .fullwidth-img {
   height: 40vh;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import {Grid, Container, Card, Image} from 'semantic-ui-react'
 
 class HomeProductList extends Component {
   render () {
@@ -9,33 +10,34 @@ class HomeProductList extends Component {
       if(item.pictureURLLarge === undefined) {
         return (
           <div className='prodCard' key={item.itemId[0]}>
-            <a href={item.viewItemURL[0]}>
-              <div className='prodInfo'>
-                <img className='prodImg' src={item.galleryURL} alt={item.title[0]} />
-                <div className='prodName'>{item.title[0]}</div>
-              </div>
-            </a>
+            <Card as={Link} to={item.viewItemURL[0]}>
+              <Image src={item.galleryURL} alt={item.title[0]} />
+              <Card.Content>
+                <Card.Header>{item.title[0]}</Card.Header>
+              </Card.Content>
+            </Card>
           </div>
         )
       } else {
         return (
           <div className='prodCard' key={item.itemId[0]}>
-            <a href={item.viewItemURL[0]}>
-              <div className='prodInfo'>
-                <img className='prodImg' src={item.pictureURLLarge} alt={item.title[0]} />
-                <div className='prodName'>{item.title[0]}</div>
-              </div>
-            </a>
+            <Card as={Link} to={item.viewItemURL[0]}>
+              <Image src={item.pictureURLLarge} alt={item.title[0]} />
+              <Card.Content>
+                <Card.Header>{item.title[0]}</Card.Header>
+              </Card.Content>
+            </Card>
           </div>
         )
       }
     })
     return (
       <div>
-        <div className='prodWrapper'>
-          {productCard}
-          <button className='bttn shopNow-bttn'><Link to='/products'>See More Products</Link></button>
-        </div>
+        <Grid columns='equal'>
+          <Grid.Row column='4'>
+            {productCard}
+          </Grid.Row>
+        </Grid>
       </div>
     )
   }
