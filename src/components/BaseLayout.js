@@ -8,18 +8,20 @@ class BaseLayout extends Component {
   render () {
     return (
       <div>
-            <Menu fixed='top' pointing secondary>
-              <Container className='topMenu'>
+          <div>
+            <Menu fixed='top' pointing secondary style={{background: '#fff'}}>
+              <Container>
                 <Menu.Item as={NavLink} name='Neatshop' to='/' />
                 <Menu.Item as={NavLink} name='Products' to='/products' />
                 <Menu.Item as={NavLink} name='About' to='/about' />
               </Container>
             </Menu>
+          </div>
         <main>
           {this.props.children}
         </main>
         <footer className='footWrapper'>
-          <Segment inverted vertical className='footSegment'>
+          <Segment inverted vertical style={{background: '#3A5683', margin: '5em 0em 0em', padding: '5em 0em'}}>
             <Container textAlign='center'>
               <Grid divided inverted stackable>
                 <Grid.Row>
