@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import '../styles/index.css'
 import {NavLink} from 'react-router-dom'
 
+
+
 class BaseLayout extends Component {
   render () {
     return (
