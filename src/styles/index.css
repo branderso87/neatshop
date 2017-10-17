@@ -1,3 +1,10 @@
+/* Colors & Fonts*/
+/*
+Navy: #3A5683;
+Gold: #D5A021;
+Silver: #A5A5A5;
+Dark Grey: #5B5B5B;
+*/
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -7,6 +14,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Avenir Next", sans-serif;
+}
+/***********************Semantic Layout***********************************/
+
+.topMenu {
+  background: #fff;
+}
+.footSegment {
+ background: #3A5683;
+ margin: 5em 0em 0em;
+ padding: 5em 0em;
 }
 /*BaseLayout - Header and Footer */
 .mainHead {
@@ -36,13 +53,13 @@ ul{
 .mainNavLink:hover, .mainNav:active{
   color: #D5A021;
 }
-footer {
+/*footer {
   background: #A5A5A5;
   height: 10vh;
   color: #ffffff;
   display:flex;
   flex-flow: row nowrap;
-}
+}*/
 .footLeft {
   background:#3A5683;
   flex-basis: 30%;
