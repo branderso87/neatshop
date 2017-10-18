@@ -12,7 +12,7 @@ class MainProductsPage extends Component {
     }
   }
   componentDidMount () {
-    fetch(`https://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=main_products&storeName=neatthingstx&outputSelector=PictureURLLarge&sortOrder=EndTimeSoonest`)
+    fetch(`/services/search/FindingService/v1?OPERATION-NAME=findItemsIneBayStores&SERVICE-VERSION=1.12.0&SECURITY-APPNAME=${authKey.productionKey}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD&affiliate.networkId=9&affiliate.trackingId=5338160172&affiliate.customId=main_products&storeName=neatthingstx&outputSelector=PictureURLLarge&sortOrder=EndTimeSoonest`)
     .then(res2 => res2.json())
     .then(data2 => {
       const allItems = data2.findItemsIneBayStoresResponse[0].searchResult[0].item
