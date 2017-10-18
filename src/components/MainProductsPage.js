@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import ProductsList from './ProductsList'
 import authKey from '../keys'
+import {Sidebar, Segment, Button, Menu, Header, Container} from 'semantic-ui-react'
 
 class MainProductsPage extends Component {
   constructor () {
@@ -23,7 +24,16 @@ class MainProductsPage extends Component {
   render () {
     return (
       <div className='productsPageWrapper'>
-        <aside className='catWrapper'>
+        <Sidebar.Pushable as={Segment} style={{display: 'hidden'}}>
+          <Sidebar as={Menu} animation='uncover' width='thin' vertical inverted>
+            <Menu.Item as={Link} to='/category/:apparel' name='Apparel'>Home</Menu.Item>
+            <Menu.Item as={Link} to='/category/:electronics' name='Electronics'>Electronics</Menu.Item>
+            <Menu.Item as={Link} to='/category/:healthandbeauty' name='Health & Beauty'> Health & Beauty'</Menu.Item>
+            <Menu.Item as={Link} to='/category/:movies' name='Movies'>Movies</Menu.Item>
+            <Menu.Item as={Link} to='/category/:Music' name='Music'>Music</Menu.Item>
+          </Sidebar>
+        </Sidebar.Pushable>
+        {/* <aside className='catWrapper'>
           <div>Categories</div>
           <ul className='catLinks'>
             <li><Link to=''>Apparel</Link></li>
@@ -35,13 +45,20 @@ class MainProductsPage extends Component {
             <li><Link to=''>Toys</Link></li>
             <li><Link to=''>Video Games</Link></li>
           </ul>
-        </aside>
-        <div className='allProductsWrapper'>
-          <div className='fullwidth-img prodHeaderImg'>
-            <div>Cool things are sold here!</div>
-          </div>
+        </aside> */}
+        <Segment id='productsPageWrapper'>
+          <Container fluid textAlign='center' id='prodHeaderImg'>
+            <Header as='h2' id='imgHeader'>Cool things are Sold here!</Header>
+          </Container>
+        </Segment>
+        <Segment id='allProductsWrapper'>
+          <Container>
+            <Header dividing id='allProducts'>
+              ALL PRODUCTS
+            </Header>
             <ProductsList allProducts={this.state.allProducts} />
-        </div>
+          </Container>
+        </Segment>
       </div>
     )
   }

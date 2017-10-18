@@ -21,7 +21,7 @@ class BaseLayout extends Component {
           {this.props.children}
         </main>
         <footer className='footWrapper'>
-          <Segment inverted vertical style={{background: '#3A5683', margin: '5em 0em 0em', padding: '5em 0em'}}>
+          <Segment inverted vertical id='footSegment'>
             <Container textAlign='center'>
               <Grid divided inverted stackable>
                 <Grid.Row>

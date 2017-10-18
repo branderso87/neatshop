@@ -21,18 +21,49 @@ body {
   background: #fff;
   font-size: 1.2rem;
 }
-.footSegment {
- background: red;
- margin: 5em 0em 0em;
+#footSegment {
+ background: #3A5683;
+ margin: 0 0 0 0;
  padding: 5em 0em;
+ border: none;
 }
-.homeHeader {
+#homeHeader {
   background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038');
   background-size: cover;
-  margin: 2.5em 0 auto 0;
+  margin-top: 2.5em;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  padding-bottom: 2em;
 }
-h2 {
-  font-size: 5rem;
+#prodHeaderImg {
+  margin-top: 2.5em;
+  margin-right: 0!important;
+  margin-left: 0!important;
+  padding-bottom: 5em;
+}
+.ui.segment {
+  padding: 0;
+}
+#topWrapper{
+  padding: 0;
+}
+#imgHeader {
+  font-family: "Avenir Next";
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  color: #fff;
+  padding-top: 3rem;
+}
+#segmentHeaders, #allProducts {
+  margin-top: 2rem;
+}
+.ui.button {
+  background: #D5A021;
+  color: #fff;
+}
+#soonButton {
+  margin: 3rem 0
 }
 .bannerAd {
   background: #3A5683;
@@ -49,6 +80,7 @@ h2 {
 #fullwidth-banner {
   margin-left: 0!important;
   margin-right: 0!important;
+  width: 100%;
 }
 .ui.segment {
   border: none;
@@ -57,6 +89,15 @@ h2 {
 .ui.card>.image {
   height: 200px;
   margin: 1.5rem;
+}
+.ui.card {
+  height: 350px;
+  margin-top: 2rem;
+  text-align: center;
+}
+#prodHeaderImg {
+  background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457');
+  background-size: cover;
 }
 /*BaseLayout - Header and Footer */
 .mainHead {
@@ -179,11 +220,7 @@ a{
 .catLinks li{
   flex-basis: 25%;
 }
-.prodHeaderImg {
-  background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457');
-  background-size: cover;
-  display: flex;
-}
+
 
 @media (min-width: 500px) {
   /*BaseLayout Header and Footer*/

@@ -27,22 +27,22 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <Segment>
-          <Container fluid textAlign='center' className='homeHeader'>
-            <Header as='h2' className='imgHeader'>Neat Things Added Daily</Header>
-            <Button large as={Link} to='/products'>SHOP NOW</Button>
+        <Segment id='topWrapper'>
+          <Container fluid textAlign='center' id='homeHeader'>
+            <Header as='h2' id='imgHeader'>Neat Things Added Daily</Header>
+            <Button size='big' as={Link} to='/products'>SHOP NOW</Button>
           </Container>
         </Segment>
         <Container className='bannerAd' id='fullwidth-banner'>
           <Header as='h4' id='whiteHeader'>Fall Sale. Take 20% off Specially Marked Items</Header>
         </Container>
-        <Segment>
+        <Segment id='productWrapper'>
           <Container>
-            <Header dividing>
+            <Header dividing id='segmentHeaders'>
               PRODUCTS LEAVING SOON
             </Header>
             <HomeProductList homeProducts={this.state.products} />
-            <Button fluid as={Link} to='/products'>SEE MORE</Button>
+            <Button fluid as={Link} to='/products' id='soonButton'>SEE MORE</Button>
           </Container>
         </Segment>
         <Segment style={{display:'none'}}>
