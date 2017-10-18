@@ -1,5 +1,9 @@
 # Neatshopp | A Gateway to Neat Things
 
+<p align="center">
+  <img width="460" height="300" src="./src/images/fullscreenHome.png">
+</p>
+
 Neatshopp is an ecommerce store selling neat things at a great price.
 
 The app pulls and displays product listings from ebay stores and will very soon include purchase capabilities and filtering.
