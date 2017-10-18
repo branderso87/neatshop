@@ -16,7 +16,9 @@ body {
   font-family: "Avenir Next", sans-serif;
 }
 /***********************Semantic Layout***********************************/
-
+p a {
+  color: #D5A021;
+}
 #topMenu {
   background: #fff;
   font-size: 1.2rem;
