@@ -32,7 +32,8 @@ p a {
 #homeHeader {
   background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3656-small_1666x.jpg?v=1492893038');
   background-size: cover;
-  margin-top: 2.5em;
+  height: 300px;
+  margin-top: 3.5em;
   margin-right: 0!important;
   margin-left: 0!important;
   padding-bottom: 2em;
@@ -96,6 +97,7 @@ p a {
   height: 350px;
   margin-top: 2rem;
   text-align: center;
+  box-shadow: none;
 }
 #prodHeaderImg {
   background: url('https://cdn.shopify.com/s/files/1/1790/3573/products/DSC_3619-small_1666x.jpg?v=1492725457');
@@ -278,6 +280,13 @@ a{
     font-size: 10vw;
     margin: 0 0 0 30%;
   }
+  #imgHeader {
+    padding-top: 6rem;
+  }
+  #prodHeaderImg {
+    padding-bottom: 6em;
+    padding-top: 3rem;
+  }
 }
 @media (min-width: 850px) {
   .mainNav li{
@@ -299,5 +308,16 @@ a{
   }
 }
 @media (min-width: 1000px) {
-
+  #topMenu {
+    font-size: 1.75rem;
+  }
+  #homeHeader {
+    height: 400px;
+  }
+  #imgHeader {
+    font-size: 5.5rem;
+  }
+  .ui.big.button {
+    font-size: 2rem;
+  }
 }
